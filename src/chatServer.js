@@ -4,8 +4,7 @@
 
 var net = require('net');
 
-var server = net.createServer(function(socket)
-{
+var server = net.createServer(function(socket) {
 	socket.write('hello\n');
 	socket.write('world\n');
 
@@ -16,4 +15,4 @@ var server = net.createServer(function(socket)
 });
 
 // Ponemos al servidor a escuchar por el puerto 2121
-server.listen('2121');
+server.listen(2121);
