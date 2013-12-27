@@ -17,7 +17,11 @@ var server = net.Server(function(socket)
 	{
 		for(var i=0; i<sockets.length; i++)
 		{
-			sockets[i].write(data);
+			if (socket != sockets[i])
+			{
+				sockets[i].write(data);
+			}
+			//sockets[i].write(data);
 		}
 	});
 
