@@ -1,0 +1,14 @@
+
+/* Servidor http.
+ * Creado el: 29 Diciembre del 2013
+ *
+ */
+
+
+var http = require('http');
+
+http.createServer(function (request, response) {
+    response.writeHead(200, {"Content-Type", "text/html"} );
+    response.write("Hola Mundo");
+    response.end();
+}).listen(8888);
