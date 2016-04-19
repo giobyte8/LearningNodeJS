@@ -15,8 +15,8 @@ var http = require('http')
  */ 
 function handleRequest(request, response) {
     
-    response.writeHead(200, {'Content-Type': 'text/html'})
-    response.end('<h1>Hello world</h1>')    
+  response.writeHead(200, {'Content-Type': 'text/html'})
+  response.end('<h1>Hello world</h1>')    
 }
 
 
