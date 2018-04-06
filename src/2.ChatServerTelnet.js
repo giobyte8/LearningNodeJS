@@ -19,7 +19,7 @@ var server = net.Server(function (socket) {
   sockets.push(socket)
 
   //
-  // when user sends data through its socket
+  // when user sends data through his socket
   // forward message to each connected user.
   socket.on('data', function(data) {
     for (var i=0; i< sockets.length; i++) {
@@ -30,14 +30,14 @@ var server = net.Server(function (socket) {
   })
 
   //
-  // when user disconnects, remove its socket from
+  // when user disconnects, remove the socket from
   // array and inform to remaining users.
   socket.on('end', function() {
     var socketIndex = sockets.indexOf(socket)
     sockets.splice(i, 1)
 
     for (var i=0; i< sockets.length; i++) {
-      var msg = 'A user leave the char'
+      var msg = 'A user just leave the chat'
       msg += ' | Connected users: ' + sockets.length
       sockets[i].write(msg)
     }
